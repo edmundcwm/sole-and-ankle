@@ -15,7 +15,6 @@ const Select = ({ label, value, children, ...delegated }) => {
   return (
     <Wrapper>
       <VisibleLabel>{label}</VisibleLabel>
-
       <SelectWrapper>
         <NativeSelect {...delegated}>{children}</NativeSelect>
 
@@ -32,7 +31,10 @@ const Select = ({ label, value, children, ...delegated }) => {
   );
 };
 
-const Wrapper = styled.label``;
+const Wrapper = styled.label`
+  display: flex;
+  align-items: baseline;
+`;
 
 const VisibleLabel = styled.span`
   color: ${COLORS.gray[700]};
